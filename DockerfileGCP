@@ -33,5 +33,5 @@ EXPOSE 80
 
 ## Run the startup script
 ENTRYPOINT ["/usr/local/bin/start.sh"]
-CMD ["/usr/bin/nginx"]
+CMD ["/usr/sbin/nginx"]
 
