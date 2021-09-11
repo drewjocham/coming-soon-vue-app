@@ -29,5 +29,5 @@ EXPOSE 8080
 EXPOSE 80
 
 ## Run the startup script instead og nginx to be able to use env vars on startup
-#CMD ["/usr/sbin/nginx"]
+#CMD ["/usr/sbin/nginx"] -
 CMD ["/bin/bash", "-c", "/etc/nginx/start.sh && nginx -g 'daemon off;'"]
