@@ -13,8 +13,8 @@ COPY config/mime.types /etc/nginx/mime.types
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 
 ## Copy the dist folder to the webroot
-COPY ./dist /usr/share/nginx/html/personal
-RUN chmod 755 -R /usr/share/nginx/html/*
+#COPY ./dist /usr/share/nginx/html/personal
+#RUN chmod 755 -R /usr/share/nginx/html/*
 
 COPY setup.sh setup.sh
 # # Make our shell script executable
