@@ -25,13 +25,9 @@ COPY start.sh /usr/local/bin/start.sh
 # Make our shell script executable
 RUN chmod 777 /usr/local/bin/start.sh
 
-# copy package.json for cloud run
-#COPY package.json package.json
-
 EXPOSE 8080
 EXPOSE 80
 
 ## Run the startup script
 ENTRYPOINT ["/usr/local/bin/start.sh"]
-CMD ["/usr/sbin/nginx"]
 

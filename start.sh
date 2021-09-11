@@ -18,6 +18,6 @@ then
     echo "END COPY";
 
     echo "Starting nginx"
-    #exec /usr/sbin/nginx
+    exec /usr/sbin/nginx
 fi
 
