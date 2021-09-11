@@ -6,7 +6,7 @@ WORKDIR /etc/nginx
 RUN rm -rf /usr/share/nginx/html/*
 RUN rm -rf /etc/nginx/*
 RUN mkdir /usr/share/nginx/html/personal
-RUN mkdir /src/
+
 # Install npm and node
 RUN apk add npm
 # Install git for npm install
@@ -37,3 +37,4 @@ EXPOSE 80
 
 ## Run the startup script
 CMD ["sh", "/usr/local/bin/start.sh"]
+CMD ["/usr/sbin/nginx"]
