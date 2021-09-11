@@ -2,14 +2,7 @@
 
 if [ ! -d "/dist" ]
 then
-    echo "install apk stuff"
-    # Install npm and node
-    apk add npm
-    # Install git for npm install
-    apk add --no-cache git
-    # Add bash
-    apk add --no-cache bash
-    echo "start npm install"
+    echo "npm install"
     npm install
 
     echo "start npm build"
@@ -25,5 +18,6 @@ then
     echo "END COPY";
 
     echo "Starting nginx"
+    exec /usr/sbin/nginx
 fi
 

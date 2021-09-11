@@ -23,7 +23,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 
 COPY start.sh /usr/local/bin/start.sh
 # Make our shell script executable
-#RUN chmod 777 /usr/local/bin/start.sh
+RUN chmod 777 /usr/local/bin/start.sh
 
 # copy package.json for cloud run
 #COPY package.json package.json
@@ -32,6 +32,6 @@ EXPOSE 8080
 EXPOSE 80
 
 ## Run the startup script
-#CMD ["sh", "/usr/local/bin/start.sh"]
-CMD ["/usr/sbin/nginx"]
+ENTRYPOINT ["/usr/local/bin/start.sh"]
+CMD ["/usr/bin/nginx"]
 
