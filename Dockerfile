@@ -6,13 +6,14 @@ WORKDIR /etc/nginx
 RUN rm -rf /usr/share/nginx/html/*
 RUN rm -rf /etc/nginx/*
 RUN mkdir /usr/share/nginx/html/personal
-
+RUN mkdir /src/
 # Install npm and node
 RUN apk add npm
-
+# Install git for npm install
+RUN apk add --no-cache git
 # Add bash
 RUN apk add --no-cache bash
-
+COPY . .
 ## Copy the template and mime types
 COPY config/nginx.conf.template /etc/nginx/nginx.conf
 COPY config/mime.types /etc/nginx/mime.types
@@ -34,5 +35,5 @@ COPY package.json package.json
 EXPOSE 8080
 EXPOSE 80
 
-## Run the startup script instead og nginx to be able to use env vars on startup
+## Run the startup script
 CMD ["sh", "/usr/local/bin/start.sh"]
