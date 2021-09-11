@@ -13,7 +13,7 @@ then
     rm -rf node_modules
     ls -all
     echo "START COPY";
-    cp -R  dist/ /usr/share/nginx/html/personal
+    cp -R  dist/* /usr/share/nginx/html/personal
     chmod 755 -R /usr/share/nginx/html/*
     echo "END COPY";
 
