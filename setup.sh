@@ -12,7 +12,7 @@ then
 
     echo "START COPY";
 
-    cp -rf  /app/dist/. /usr/share/nginx/html/
+    cp -rf  /etc/nginx/dist/. /usr/share/nginx/html/personal
 
     echo "END COPY";
 fi
