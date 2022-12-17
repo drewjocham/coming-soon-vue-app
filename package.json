@@ -14,7 +14,7 @@
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
+    "vue": "^2.7.14",
     "vue-analytics": "^5.22.1",
     "vue-gtag": "^1.11.0",
     "vue-typed-js": "^0.1.2"
